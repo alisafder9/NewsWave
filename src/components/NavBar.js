@@ -119,11 +119,13 @@ function Navbar() {
                                 Food
                             </NavLink>
                         </li>
+                        <li className="nav-item">
+                            <button onClick={toggleTheme} className={`btn btn-outline-secondary mx-sm-2 ${background} ${textColor}`}>
+                                <FontAwesomeIcon icon={theme === 'light' ? faMoon : faSun} />
+                            </button>
+                        </li>
                     </ul>
                 </div>
-                <button onClick={toggleTheme} className={`btn btn-outline-secondary mx-1 ml-2 ${background} ${textColor}`}>
-                    <FontAwesomeIcon icon={theme === 'light' ? faMoon : faSun} />
-                </button>
             </div>
         </nav>
     );
