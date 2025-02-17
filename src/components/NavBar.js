@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';  // Import NavLink
 import { useTheme } from './ThemeContext';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSun, faMoon } from '@fortawesome/free-solid-svg-icons';
@@ -10,26 +10,115 @@ function Navbar() {
     const navbarClass = theme === 'light' ? 'navbar-light bg-light' : 'navbar-dark bg-dark';
     const background = theme === 'light' ? 'bg-light' : 'bg-dark';
     const textColor = theme === 'light' ? 'text-black' : 'text-white';
+    
     return (
         <nav className={`navbar navbar-expand-lg fw-medium ${navbarClass} fixed-top`}>
             <div className="container-fluid">
-                <Link className="navbar-brand" to="/">NewsWave</Link>
+                <NavLink className="navbar-brand" to="/">NewsWave</NavLink>
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
                 </button>
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li className="nav-item"><Link className="nav-link" to="/">Top</Link></li>
-                        <li className="nav-item"><Link className="nav-link" to="/sports">Sports</Link></li>
-                        <li className="nav-item"><Link className="nav-link" to="/technology">Technology</Link></li>
-                        <li className="nav-item"><Link className="nav-link" to="/business">Business</Link></li>
-                        <li className="nav-item"><Link className="nav-link" to="/science">Science</Link></li>
-                        <li className="nav-item"><Link className="nav-link" to="/entertainment">Entertainment</Link></li>
-                        <li className="nav-item"><Link className="nav-link" to="/health">Health</Link></li>
-                        <li className="nav-item"><Link className="nav-link" to="/world">World</Link></li>
-                        <li className="nav-item"><Link className="nav-link" to="/politics">Politics</Link></li>
-                        <li className="nav-item"><Link className="nav-link" to="/environment">Environment</Link></li>
-                        <li className="nav-item"><Link className="nav-link" to="/food">Food</Link></li>
+                        <li className="nav-item">
+                            <NavLink 
+                                className="nav-link" 
+                                to="/" 
+                                activeClassName="active"  // Set the active class here
+                            >
+                                Top
+                            </NavLink>
+                        </li>
+                        <li className="nav-item">
+                            <NavLink 
+                                className="nav-link" 
+                                to="/sports" 
+                                activeClassName="active" 
+                            >
+                                Sports
+                            </NavLink>
+                        </li>
+                        <li className="nav-item">
+                            <NavLink 
+                                className="nav-link" 
+                                to="/technology" 
+                                activeClassName="active" 
+                            >
+                                Technology
+                            </NavLink>
+                        </li>
+                        <li className="nav-item">
+                            <NavLink 
+                                className="nav-link" 
+                                to="/business" 
+                                activeClassName="active" 
+                            >
+                                Business
+                            </NavLink>
+                        </li>
+                        <li className="nav-item">
+                            <NavLink 
+                                className="nav-link" 
+                                to="/science" 
+                                activeClassName="active" 
+                            >
+                                Science
+                            </NavLink>
+                        </li>
+                        <li className="nav-item">
+                            <NavLink 
+                                className="nav-link" 
+                                to="/entertainment" 
+                                activeClassName="active" 
+                            >
+                                Entertainment
+                            </NavLink>
+                        </li>
+                        <li className="nav-item">
+                            <NavLink 
+                                className="nav-link" 
+                                to="/health" 
+                                activeClassName="active" 
+                            >
+                                Health
+                            </NavLink>
+                        </li>
+                        <li className="nav-item">
+                            <NavLink 
+                                className="nav-link" 
+                                to="/world" 
+                                activeClassName="active" 
+                            >
+                                World
+                            </NavLink>
+                        </li>
+                        <li className="nav-item">
+                            <NavLink 
+                                className="nav-link" 
+                                to="/politics" 
+                                activeClassName="active" 
+                            >
+                                Politics
+                            </NavLink>
+                        </li>
+                        <li className="nav-item">
+                            <NavLink 
+                                className="nav-link" 
+                                to="/environment" 
+                                activeClassName="active" 
+                            >
+                                Environment
+                            </NavLink>
+                        </li>
+                        <li className="nav-item">
+                            <NavLink 
+                                className="nav-link" 
+                                to="/food" 
+                                activeClassName="active" 
+                            >
+                                Food
+                            </NavLink>
+                        </li>
                     </ul>
                 </div>
                 <button onClick={toggleTheme} className={`btn btn-outline-secondary mx-1 ml-2 ${background} ${textColor}`}>
