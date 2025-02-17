@@ -90,7 +90,7 @@ export default function News({ category }) {
   return (
     <div className={`container rounded-3 overflow-hidden my-3 ${background} ${textColor}`}>
       <h2 className="text-center"
-        style={{ marginTop: '2rem', marginBottom: '2rem', padding: '1rem' }}>
+        style={{ marginTop: '1rem', marginBottom: '1rem', padding: '1rem' }}>
         {getCategoryTitle(category)}
       </h2>
 
